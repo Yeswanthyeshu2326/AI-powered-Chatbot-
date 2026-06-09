@@ -1,5 +1,7 @@
 # Ai Powered Chatbot
 
+
+![Home](homw.png)
 ## Description
 An AI-powered chatbot that provides accurate support for Twitter/X account management, security, and recovery using LLMs and RAG.
 
