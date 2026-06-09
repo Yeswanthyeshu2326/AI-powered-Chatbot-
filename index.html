@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensures proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Support Chatbot - Modern UI</title>
+    
+    <!-- Link to Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Link to the CSS stylesheet which defines all visual styles and variables -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The main application container that wraps the layout -->
+    <main class="app-shell">
+      
+      <!-- LEFT PANEL: Theme Customizer (Lets users change background colors dynamically) -->
+      <aside class="settings-sidebar" id="settings-sidebar">
+        <h2>Theme Customizer</h2>
+        <p class="section-desc">Change the background colors and design styles below. This shows how HTML inputs can modify CSS variables in real-time.</p>
+        
+        <!-- Quick Preset Themes -->
+        <div class="control-group">
+          <h3>Preset Themes</h3>
+          <div class="theme-presets">
+            <button class="theme-btn active" data-theme="default" style="background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);">Default Dark</button>
+            <button class="theme-btn" data-theme="cosmic" style="background: linear-gradient(135deg, #1e1b4b, #311042, #180828);">Deep Cosmic</button>
+            <button class="theme-btn" data-theme="aurora" style="background: linear-gradient(135deg, #022c22, #064e3b, #022c22);">Aurora Teal</button>
+            <button class="theme-btn" data-theme="sunset" style="background: linear-gradient(135deg, #451a03, #701a75, #311042);">Sunset Glow</button>
+            <button class="theme-btn" data-theme="light" style="background: linear-gradient(135deg, #f1f5f9, #e2e8f0, #cbd5e1); color: #0f172a;">Clean Light</button>
+          </div>
+        </div>
+
+        <!-- Custom Background Color Picker -->
+        <div class="control-group">
+          <h3>Custom Background</h3>
+          <div class="color-picker-wrapper">
+            <label for="bg-color-picker">Pick Solid Color:</label>
+            <input type="color" id="bg-color-picker" value="#0f172a" />
+          </div>
+          <p class="help-text">Try picking a color! The background will update instantly.</p>
+        </div>
+
+        <div class="footer-note">
+          <p>Read <code>style.css</code> & <code>script.js</code> to see how this works!</p>
+        </div>
+      </aside>
+
+      <!-- RIGHT PANEL: Chatbot Card -->
+      <section class="chat-card">
+        <!-- Chat Header: Contains title, subtitle, and online status pill -->
+        <header class="chat-header">
+          <div class="header-info">
+            <!-- Icon/Logo -->
+            <div class="brand-logo">
+              <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="eyebrow">AI Customer Support</p>
+              <h1>X Help Desk</h1>
+            </div>
+          </div>
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Online</span>
+          </div>
+        </header>
+
+        <!-- Chat History Box: Messages will be dynamically appended here via JS -->
+        <div id="chat-box" class="chat-box" aria-live="polite">
+          <!-- A welcome message is added automatically on load by script.js -->
+        </div>
+
+        <!-- Suggestions: Quick clickable chips to help the user start a conversation -->
+        <div class="suggestions" aria-label="Common support topics">
+          <button class="chip" data-message="How do I recover my account?">🔑 Recover Account</button>
+          <button class="chip" data-message="How do I delete my account?">🗑️ Delete Account</button>
+          <button class="chip" data-message="How do I secure my account?">🛡️ Secure Account</button>
+        </div>
+
+        <!-- Chat Input Form: Text field and submit button -->
+        <form id="chat-form" class="chat-form">
+          <div class="input-wrapper">
+            <input
+              id="user-input"
+              type="text"
+              placeholder="Ask anything about your X account..."
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button type="submit" class="send-btn" aria-label="Send message">
+            <!-- SVG Arrow Icon for Send -->
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+            </svg>
+          </button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Connect our client-side Javascript logic file -->
+    <script src="script.js"></script>
+  </body>
+</html>
