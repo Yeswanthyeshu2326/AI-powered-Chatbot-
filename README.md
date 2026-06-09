@@ -1,13 +1,13 @@
 # Ai Powered Chatbot
 
+## Description
+An AI-powered chatbot that provides accurate support for Twitter/X account management, security, and recovery using LLMs and RAG.
+
 ## Home Interface
 ![AI-powered-Chatbot](home.png)
 Displays the main X Help Desk chatbot interface with a clean and modern design.
 Provides quick access buttons for common support requests such as account recovery and security.
 Features customizable themes and a user-friendly layout for improved user experience.
-
-## Description
-An AI-powered chatbot that provides accurate support for Twitter/X account management, security, and recovery using LLMs and RAG.
 
 ## Chat Conversation
 ![AI-powered-Chatbot](chat.png)
