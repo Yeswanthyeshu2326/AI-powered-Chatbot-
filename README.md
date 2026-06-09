@@ -17,7 +17,7 @@ Offers a conversational experience to help users resolve account-related issues 
 
 
 ## heme Customization
-![AI-powered-Chatbot](result(2).png)
+![AI-powered-Chatbot](result (2).png)
 Allows users to personalize the chatbot interface using multiple predefined themes.
 Supports dynamic background color changes and real-time UI updates.
 Enhances accessibility and user engagement through customizable visual preferences.
